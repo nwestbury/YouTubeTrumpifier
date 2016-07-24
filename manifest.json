@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "YouTube Trumpifier",
+  "description": "",
+  "version": "0.0",
+
+  "browser_action": {
+   "default_icon": "icon.png",
+   "default_popup": "popup.html",
+   "default_title": "YouTube Trumpifier"
+  },
+  "permissions": [
+      "<all_urls>"
+   ],
+   "content_scripts": [{
+       "matches": [ "https://www.youtube.com/*"],
+       "js": ["lib/ccv.js", "lib/face.js", "lib/jquery.js", "content.js"]
+  }],
+    "web_accessible_resources": ["img/trump.png", "img/trump2.png"]
+}
